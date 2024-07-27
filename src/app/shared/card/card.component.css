@@ -1,0 +1,48 @@
+
+.card {
+    height: 33vw;
+    width:  21vw;
+    cursor: pointer; /* Esto hará que el cursor cambie a una mano indicando que es clicable */
+    border: 2px solid #e0e0e0; /* Añadir un borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra */
+    transition: box-shadow 0.3s ease-in-out; /* Añadir una transición suave para la sombra */
+
+    align-items: center;
+    margin: 0 auto; /* Añadir margen para separación visual */  
+    font-size: 1.1vw; /* Aumentar el tamaño del texto */
+  
+
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Incrementar la sombra cuando se pasa el cursor sobre la tarjeta */
+  }
+  
+  .card-image {
+    margin:auto;
+    width: 90%;
+    height: 60%; /* Altura relativa al contenedor */
+    object-fit: contain;
+  }
+
+  .price {
+    margin: 0 auto; /* Añadir margen para separación visual */
+    font-weight: bold; /* Hacer el texto en negrita */
+    font-size: 2.7vw; /* Aumentar el tamaño del texto */
+  }
+  
+  @media (max-width: 600px) {
+    .card {
+      width: 95vw; /* Ancho casi completo en pantallas pequeñas */
+      height: 30vh; /* Altura ajustada */
+    }
+  
+    .products-container {
+      flex-direction: column; /* Disposición vertical en pantallas pequeñas */
+    }
+  }
+  
+  mat-card-header {
+    padding: 0;
+  }
+  

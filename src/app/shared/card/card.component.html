@@ -1,0 +1,15 @@
+
+  <mat-card class="card" (click)="onCardClick()">
+
+    <img ngClass="card-image" [src]="imageBlobUrl" [alt]="product.title">
+
+    <mat-card-subtitle class="price">{{ product.price | currency }}</mat-card-subtitle>
+
+    <mat-card-header>
+
+      <mat-card-title>{{ product.title }}</mat-card-title>
+
+    </mat-card-header>
+    
+  </mat-card>
+  

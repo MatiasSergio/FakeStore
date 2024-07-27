@@ -1,0 +1,10 @@
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .background {
+    background: rgb(141, 132, 132);
+  }

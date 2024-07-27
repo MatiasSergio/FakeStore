@@ -1,0 +1,28 @@
+<mat-card ngClass="background">
+    <div class="card-container">
+      <!-- Left Column -->
+      <div class="left-column">
+        <img ngClass="mat-card-image" mat-card-image [src]="productDetail.image" alt="Imagen del producto">
+        <mat-card-content>
+          <h3>Description:</h3>
+          <p>{{ productDetail.description }}</p>
+        </mat-card-content>
+      </div>
+      <!-- Right Column -->
+      <div class="right-column">
+        <mat-card-header>
+          <mat-card-title>{{ productDetail.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="price">{{ productDetail.price | currency}}</p>
+        </mat-card-content>
+        <mat-card-actions MatCardAction.align="end">
+          <button class="background-brown fullwidth buy-button" mat-button>
+            <mat-icon ngClass="cart-icon" fontIcon="shopping_cart"></mat-icon>
+            <span ngClass="buy-text">Comprar</span>
+          </button>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card>
+  

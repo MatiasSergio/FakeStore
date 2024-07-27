@@ -1,0 +1,17 @@
+.body-container{ 
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.body-elements{
+    flex: 1
+}
+
+.sticky-header {
+    position: -webkit-sticky; /* Para compatibilidad con Safari */
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    transition: transform 1s ease, opacity 1s ease;
+  }
