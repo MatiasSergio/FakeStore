@@ -1,0 +1,13 @@
+
+<h2 ngClass="title-category">Featured Products</h2>
+<br>
+<div class="carousel-container">
+  <button class="arrow left" (click)="prev()">&#10094;</button>
+    <div class="carousel-track">
+      <!-- <div *ngFor="let product of products.slice(0, 3); let i = index" [ngClass]="[animationClass, cardClass[i]]"> -->
+      <div *ngFor="let product of productsView; let i = index" [ngClass]="[cardClass[i]]">
+        <app-card *ngIf="product" [product]="product"></app-card>
+      </div>
+  </div>
+  <button class="arrow right" (click)="next()">&#10095;</button>
+</div>

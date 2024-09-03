@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { CategoryComponent } from './category/category.component';
 import { CardComponent } from 'src/app/shared/card/card.component';
 
-
-
 @NgModule({
   declarations: [
     CategoryComponent
@@ -14,6 +12,8 @@ import { CardComponent } from 'src/app/shared/card/card.component';
     CommonModule,
     CardComponent
   ],
-  exports: [CategoryComponent]
+  exports: [
+    CategoryComponent
+  ]
 })
 export class CategoryModule { }

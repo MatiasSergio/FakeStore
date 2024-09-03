@@ -1,6 +1,6 @@
 
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -16,12 +16,26 @@ export class CategoryComponent implements OnInit {
 
   products: any[] = [];
 
-
-  constructor(private categoryService: CategoryService, private router: Router) {}
+  constructor(private route: ActivatedRoute, private categoryService: CategoryService, private router: Router) {}
 
   ngOnInit(): void {
-    this.getProducts();
+
+    // this.route.paramMap.subscribe(params => {
+    //   const categoryfake = params.get('category');
+
+      // this.getProducts();
+    // });
+
+
   }
+
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['category']) {
+      this.getProducts();
+    }
+  }
+  
 
   getProducts(): void {
     this.categoryService.getProductsByCategory(this.category, this.limit).subscribe(

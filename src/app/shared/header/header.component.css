@@ -1,3 +1,18 @@
+.type-login{
+  cursor: pointer;
+}
+
+.container{
+  height: 6.18rem;
+  margin-bottom: 5rem;
+}
+
+.principal {
+  z-index: 999;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
 
 .background-black {
   background: #222222;
@@ -33,57 +48,33 @@
   font-size: 1.3rem;
 }
 
-@keyframes hideTopBar {
-  0% {
-  transform: translateY(0);
-  opacity: 1;
-}
 
+@keyframes hideBottomBar {
+  0% {
+    transform: translateY(0%);
+    opacity: 0.8;
+  }
   100% {
-    transform: translateY(100%);
-    opacity: 0;
+    transform: translateY(-6.50rem);
+    opacity: 1;
   }
 }
 
-@keyframes hideBottomBar {
+@keyframes moveCentralBar {
   0% {
     transform: translateY(0%);
     opacity: 1;
   }
   100% {
-    transform: translateY(-100%);
-    opacity: 0;
+    transform: translateY(-2.8rem);
+    opacity: 1;
   }
 }
 
-:host {
-  display: block;
-}
-
-.sticky-header {
-  position: -webkit-sticky;
-  top:0;
-  position: sticky;
-  z-index: 1000;
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-.hide-top-bar {
-  animation: hideTopBar 1s ease forwards;
-}
+.center-bar {
+  animation: moveCentralBar 0.3s ease forwards;
+} 
 
 .hide-bottom-bar {
-  animation: hideBottomBar 1s ease forwards;
-}
-
-.top-bar {
-  position: relative;
-  width: 100%;
-  z-index: 999;
-}
-
-.bottom-bar {
-  position: relative;
-  width: 100%;
-  z-index: 999;
+  animation: hideBottomBar 0.3s ease forwards;
 }

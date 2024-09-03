@@ -1,12 +1,33 @@
 
-<mat-toolbar [ngClass]="{'hide-top-bar': !showTopBar}" class="top-bar background-black white-text height-28">
-  <span>Garantia de confianza</span>
-</mat-toolbar>
+<div  *ngIf="data" [ngClass]="{'container': !moveCentralBar}">
 
-<mat-toolbar ngClass="sticky-header background-red height-618 white-text">
-  <span ngClass="type-header" (click)="fakeStoreClickHandle()">FAKESTORE +</span>
-</mat-toolbar>
+  <mat-toolbar class="background-black white-text height-28 top-bar">
+    <span>{{data.header.slogan | titlecase}}</span>
+  </mat-toolbar>
 
-<mat-toolbar [ngClass]="{'hide-bottom-bar': !showBottomBar}" class="bottom-bar background-brown white-text height-325">
-  <span>Categorias</span>
-</mat-toolbar>
+  <mat-toolbar class="background-red white-text height-618 principal" [ngClass]="{'center-bar': !moveCentralBar}" > 
+    <span class="type-header" (click)="fakeStoreClickHandle()">{{data.header.logo | titlecase}}</span>
+    <!--  -->
+    <ng-container class="type-login" *ngIf="isLogged; then logoutTemplate else loginTemplate"></ng-container>
+    <!--  -->
+  </mat-toolbar>
+  
+  <mat-toolbar class="background-brown white-text height-325 bottom-bar" [ngClass]="{'hide-bottom-bar': !moveCentralBar}"  >
+    <mat-form-field appearance="fill">
+      <mat-label>{{data.header.categories | titlecase}}</mat-label>
+      <mat-select (selectionChange)="onCategorySelected($event)">
+        <mat-option *ngFor="let category of categories" [value]="category">
+          {{ category | titlecase }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-toolbar>
+</div>
+
+<ng-template #loginTemplate>
+  <span (click)="loginClickHandle()">Login</span>
+</ng-template>
+
+<ng-template #logoutTemplate>
+  <span (click)="logoutClickHandle()">Logout</span>
+</ng-template>

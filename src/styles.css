@@ -9,3 +9,10 @@ body {
 .background-brown {
   background: #b33524 ;
 }
+
+.stickyglobal {
+  position: -webkit-sticky;
+  top:0;
+  position: sticky;
+  z-index: 1000;
+}

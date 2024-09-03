@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import {FooterComponent} from './footer.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
-
 @NgModule({
-  declarations: [FooterComponent],
+  declarations: [
+    FooterComponent
+  ],
   imports: [
     CommonModule,
     MatToolbarModule
@@ -15,4 +16,4 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FooterComponent
   ],
 })
-export class FooterModule { }
+export class FooterModule {}

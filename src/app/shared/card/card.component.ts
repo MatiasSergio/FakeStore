@@ -1,10 +1,12 @@
 
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ImageService } from 'src/app/services/image.service';
 import { Router } from '@angular/router';
+import { Product } from '../../models/product';  
+
 
 @Component({
   selector: 'app-card',
@@ -13,8 +15,8 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [MatCardModule, CommonModule],
 })
-export class CardComponent {
-  @Input() product: any;
+export class CardComponent implements OnInit{
+  @Input() product!: Product;
 
   imageBlobUrl: SafeUrl | undefined;
 

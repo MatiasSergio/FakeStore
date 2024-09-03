@@ -3,8 +3,8 @@
     height: 33vw;
     width:  21vw;
     cursor: pointer; /* Esto hará que el cursor cambie a una mano indicando que es clicable */
-    border: 2px solid #e0e0e0; /* Añadir un borde */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra */
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /*Añadir sombra*/
     transition: box-shadow 0.3s ease-in-out; /* Añadir una transición suave para la sombra */
 
     align-items: center;
@@ -15,7 +15,7 @@
   }
   
   .card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Incrementar la sombra cuando se pasa el cursor sobre la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /*Incrementar la sombra cuando se pasa el cursor sobre la tarjeta*/
   }
   
   .card-image {
@@ -45,4 +45,3 @@
   mat-card-header {
     padding: 0;
   }
-  

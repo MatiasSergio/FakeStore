@@ -1,4 +1,8 @@
-::ng-deep .custom-card {border: none}
+/* Matias: Esto quita el sombreado de la card que viene por defecto */
+mat-card {
+  box-shadow:none;
+}
+/* Matias: Esto quita el sombreado de la card que viene por defecto */
 
 .background {
   background: #f6f6f6;

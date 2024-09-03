@@ -6,7 +6,7 @@ import { DetailComponent } from './shared/detail/detail.component';
 const routes: Routes = [
   {path: '', redirectTo: '/shop/products', pathMatch: 'full' }, 
   {path: 'shop', loadChildren: () => import('./pages/shop/shop.module').then(m => m.ShopModule) },
-  {path: 'user', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
+  {path: 'login', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
   {path: "product/:id", component: DetailComponent}
 ];
 

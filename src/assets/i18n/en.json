@@ -1,0 +1,21 @@
+{
+  "header": {
+    "slogan": "Trust Guarantee",
+    "logo": "FAKESTORE +",
+    "categories": "Categoríes"
+  },
+  "footer":{
+    "logo": "FAKESTORE +",
+    "copyright": "Copyright © 2024 FakeStore S.A.",
+    "description": "The use of this website implies acceptance of the Terms and Conditions and Privacy Policies of FakeStore S.A.. The photos are for illustrative purposes. The sale of any of the published products is subject to stock verification. The online prices for the products presented/published on https://FakeStore.com and/or https://www.FakeStore.com are valid exclusively for online purchases on the aforementioned pages."
+  },
+  "category":{
+    "featured":"Featured Products",
+    "electronics":"Electronics",
+    "jewelery":"Jewelery",
+    "men":"Men's Clothing",
+    "women":"Women's Clothing"
+}
+}
+
+  

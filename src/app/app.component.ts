@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from './services/dataservice.service';
+import { TokenService } from './core/auth/token.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-  title = 'fakestore';
+export class AppComponent implements OnInit {
+
+   constructor(private dataService: DataserviceService, private tokenService: TokenService){};
+   isLogged: boolean = true;
+   
+ngOnInit(): void {
+    this.dataService.loadData().subscribe();
+    if (this.tokenService.isTokenPresent()) {
+      this.tokenService.setLogged();
+    }
+}
+
 }

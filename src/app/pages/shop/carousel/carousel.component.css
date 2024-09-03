@@ -1,0 +1,79 @@
+ 
+
+.title-category{
+  margin: 3rem 1rem 1rem;
+  border-bottom:4px solid rgb(0, 0, 0) ;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem; 
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0 1rem; 
+}
+
+.arrow.left {
+  position: absolute;
+  left: 3.5rem;
+}
+
+.arrow.right {
+  position: absolute;
+  right: 3.5rem;
+} 
+
+.carousel-track {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+  gap: 5vw;
+}
+
+.sideCards{
+  transform: scale(0.8);
+} 
+.centerCard{
+  transform: scale(1.1);
+} 
+/* 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.5s ease-in-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.5s ease-in-out forwards;
+} */
+

@@ -23,6 +23,7 @@ export class LoginService {
         console.log('Respuesta del servidor:', response);
         if (response && response.token) {
           this.tokenService.savetoken(response.token);
+          
           console.log('Token guardado en la cookie:', response.token);
         }
         return response;

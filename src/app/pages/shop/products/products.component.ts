@@ -9,7 +9,8 @@ import { CategoryService } from 'src/app/services/category.service';
 })
 export class ProductsComponent implements OnInit {
 
-    categories: string[] = [];
+  categories: string[] = [];
+  limit : number = 4;
   
     constructor(private categoryService: CategoryService) { }
   
